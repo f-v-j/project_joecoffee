@@ -1,16 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import PageFrame from "./Components/PageFrame";
-
-
-
+import {Route} from "react-router-dom";
 
 
 function App() {
   return (
     <div className="App">
-         <PageFrame />
-
+        <Route component={} />
+        <PageFrame />
     </div>
   );
 }
