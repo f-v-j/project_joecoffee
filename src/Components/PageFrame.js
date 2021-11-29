@@ -6,12 +6,12 @@ import MenuBar from "./MenuBar";
 import TextArea from "./TextArea";
 import Footer from "./Footer";
 
-function PageFrame() {
+function PageFrame(props) {
     return (
         <div className="App">
             <Header />
             <MenuBar />
-            <TextArea />
+            <TextArea image={props.image}/>
             <Footer />
         </div>
     );

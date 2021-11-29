@@ -1,14 +1,17 @@
 import logo from './logo.svg';
+
 import './App.css';
 import PageFrame from "./Components/PageFrame";
-import {Route} from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
+import Careers from "./Pages/Careers/Careers";
+import React from "react";
 
 
-function App() {
+function App(props) {
   return (
     <div className="App">
-        <Route component={} />
-        <PageFrame />
+
+        <PageFrame image={props.image}/>
     </div>
   );
 }

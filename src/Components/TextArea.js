@@ -1,6 +1,11 @@
-function TextArea() {
+
+
+function TextArea(props) {
+
     return (
-            <div>dd TextArea TextArea</div>
+            <div>
+                <img src={props.image} className="main_image" alt="" />
+            </div>
     );
 }
 

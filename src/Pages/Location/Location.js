@@ -1,5 +1,5 @@
 
-import './Careers.css';
+import './Location.css';
 
 
 import PageFrame from "../../Components/PageFrame";
@@ -7,7 +7,7 @@ import React from "react";
 
 
 
-function Careers(props) {
+function Location(props) {
     return (
         <div className="App">
             <PageFrame image={props.image}/>
@@ -15,4 +15,4 @@ function Careers(props) {
     );
 }
 
-export default Careers;
+export default Location;
