@@ -1,9 +1,49 @@
 .footer {
-
     background: rgb(17, 138, 203);
     width:100%;
-    height:300px;
     color:white;
+    text-align:left;
+    padding:25px;
+}
+.footer a{
+    text-decoration: none;
+    color:white;
+    display:block;
+}
+
+.footer .top-footer{
+
+    display: flex;
+
 
 }
+
+.footer .bottom-footer{
+
+    display: flex;
+    margin-top:50px;
+    padding-bottom:50px;
+
+}
+
+.footer .top-footer div {
+    width: 25%;
+
+}
+
+.footer .top-footer img.logo-footer {
+    width: 70%;
+    margin-top:20px;
+
+}
+
+.footer .bottom-footer div {
+    width: 50%;
+
+}
+.footer .bottom-footer p {
+    margin:0;
+}
+
+
 
