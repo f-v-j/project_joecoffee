@@ -9,7 +9,7 @@ import React from "react";
 
 function Discover(props) {
     return (
-        <div className="App">
+        <div className="discover">
             <PageFrame image={props.image}/>
         </div>
     );

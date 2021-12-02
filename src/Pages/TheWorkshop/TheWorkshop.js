@@ -9,7 +9,7 @@ import React from "react";
 
 function TheWorkshop(props) {
     return (
-        <div className="App">
+        <div className="the-workshop">
             <PageFrame image={props.image}/>
         </div>
     );

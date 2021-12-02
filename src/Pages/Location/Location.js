@@ -9,7 +9,7 @@ import React from "react";
 
 function Location(props) {
     return (
-        <div className="App">
+        <div className="location">
             <PageFrame image={props.image}/>
         </div>
     );

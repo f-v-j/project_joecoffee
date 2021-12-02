@@ -1,83 +1,48 @@
 .menubar .left-area{
-
-    text-align:right;
-}
+    text-align:right;}
 
 .menubar .center-area{
-
     text-align: left;
 }
 .menubar .right-area {
-
     text-align:left;
 }
 
-
 .menubar
-{
-    display: table;
+{    display: table;
     width: 100%;
     text-transform: uppercase;
     font-weight: 800;
     color:black;
 }
 
-
-
 .menubar a{
-
-
     text-decoration:none;
-
-
+    color: black;
 }
 
 .menubar .center-area a{
-
-
-margin-left: 15px;
-
-
-
+    margin-left: 15px;
 }
 
 .menubar .right-area a{
-
-
-margin-left:10px;
-
-
+    margin-left:10px;
 }
 
 .menubar .left-area a{
-
-
-
-
-
 }
 
 .menubar .right-area button{
-
-
     background-color: rgb(17, 138, 203);
     padding: 10px;
     border-radius: 0;
     color: white;
-
     border: navajowhite;
-
-
 }
 
 
 .menubar .aaa{
-
-
     display: table-cell;
     vertical-align: middle;
-
-
-
 }
 

@@ -45,5 +45,39 @@
     margin:0;
 }
 
+.socilnetwork{
+    display:flex;
+}
+
+.socilnetwork a{
+    margin-right:15px;
+}
+
+
+
+
+.footer form input[type=text]{
+    height:50px;
+    border:2px solid white;
+    background-color: rgb(17, 138, 203);
+    width:55%;
+
+}
+.footer form input[type=submit]{
+    height:50px;
+    color:rgb(17, 138, 203);
+    background-color:white;
+    border:2px solid white;
+    border-radius:0px;
+    width:25%;
+
+
+}
+
+.footer form  input::placeholder {
+    color: white;
+
+}
+
 
 

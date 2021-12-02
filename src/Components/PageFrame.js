@@ -8,7 +8,7 @@ import Footer from "./Footer";
 
 function PageFrame(props) {
     return (
-        <div className="App">
+        <div className="page-frame">
             <Header />
             <MenuBar />
             <TextArea image={props.image}/>

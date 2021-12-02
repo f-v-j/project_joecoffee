@@ -9,7 +9,7 @@ import React from "react";
 
 function Wholesale(props) {
     return (
-        <div className="App">
+        <div className="wholesale">
             <PageFrame image={props.image}/>
         </div>
     );
