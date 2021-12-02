@@ -22,12 +22,32 @@ function MenuBar() {
 
                 <div className="center-area aaa">
 
-                    <NavLink to="/careers">Careers</NavLink>
-                    <NavLink to="/catering">Catering</NavLink>
-                    <NavLink to="/discover">Discover</NavLink>
-                    <NavLink to="/location">Location</NavLink>
-                    <NavLink to="/shop">Shop</NavLink>
+                    <NavLink to="/shop" className="mshop">Shop
+                    <div className="shop-menubar">
+                        <NavLink to="/">COFFEE</NavLink>
+                        <NavLink to="/">TEA & TURMERIC</NavLink>
+                        <NavLink to="/">BREW GEAR</NavLink>
+                        <NavLink to="/">MERCHANDISE</NavLink>
+                        <NavLink to="/">SUBSCRIBE</NavLink>
+                        <NavLink to="/">GIFTS</NavLink>
+                        <NavLink to="/">JOE TO GO BOXED COFFEE</NavLink>
+                        <NavLink to="/">CLASSES</NavLink>
+                    </div>
+                    </NavLink>
+
                     <NavLink to="/theworkshop">TheWorkshop</NavLink>
+                    <NavLink to="/discover" className="mdiscover">Discover
+                    <div className="discover-menubar">
+                        <NavLink to="/">OUR STORY</NavLink>
+                        <NavLink to="/">BREW GUIDES</NavLink>
+                        <NavLink to="/">BLOG</NavLink>
+
+                    </div>
+                    </NavLink>
+
+                    <NavLink to="/catering">Catering</NavLink>
+                    <NavLink to="/careers">Careers</NavLink>
+                    <NavLink to="/location">Location</NavLink>
                     <NavLink to="/wholesale">Wholesale</NavLink>
 
                 </div>
@@ -48,18 +68,6 @@ function MenuBar() {
 
 
 
-
-
-                {/*
-                <NavLink to="/"><h2>JoeCofee</h2></NavLink>
-
-                <NavLink to="/careers">Careers</NavLink>
-                <NavLink to="/catering">Catering</NavLink>
-                <NavLink to="/discover">Discover</NavLink>
-                <NavLink to="/location">Location</NavLink>
-                <NavLink to="/shop">Shop</NavLink>
-                <NavLink to="/theworkshop">TheWorkshop</NavLink>
-                <NavLink to="/wholesale">Wholesale</NavLink>*/}
 
             </div>
 

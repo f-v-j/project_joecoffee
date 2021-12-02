@@ -46,3 +46,29 @@
     vertical-align: middle;
 }
 
+
+
+
+.mshop, .mdiscover{
+    position:relative;
+
+}
+
+
+.shop-menubar, .discover-menubar{
+    background-color:white;
+    position:absolute;
+    padding: 20px;
+    top: 20px;
+    left: -20px;
+    display:none;
+}
+.mshop:hover .shop-menubar, .mdiscover:hover .discover-menubar{
+    display:block;
+
+}
+.shop-menubar a, .discover-menubar a{
+    display: block;
+    margin-left:0 !important;
+}
+
