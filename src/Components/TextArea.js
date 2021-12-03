@@ -1,4 +1,6 @@
 import './TextArea.css';
+import BigImage from "./BigImage";
+import SmallImage from "./SmallImage";
 
 function TextArea(props) {
 
@@ -7,6 +9,30 @@ function TextArea(props) {
                 <img src={props.image} className="main_image" alt="" />
 
                 <div className="text-block">
+
+
+
+
+                        <SmallImage image={props.image} />
+                        <SmallImage image={props.image} />
+                        <SmallImage image={props.image} />
+
+
+
+
+                    <BigImage image={props.image} />
+
+
+                        <SmallImage image={props.image} />
+                        <SmallImage image={props.image} />
+                        <SmallImage image={props.image} />
+                        <SmallImage image={props.image} />
+                        <SmallImage image={props.image} />
+
+
+
+
+
 
 
                 </div>

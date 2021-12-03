@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Route, Routes} from "react-router-dom"
+
+
+import App from './App';
 import Careers from "./Pages/Careers/Careers";
 import Catering from "./Pages/Catering/Catering";
 import Discover from "./Pages/Discover/Discover";
@@ -11,10 +14,13 @@ import Location from "./Pages/Location/Location";
 import Shop from "./Pages/Shop/Shop";
 import TheWorkshop from "./Pages/TheWorkshop/TheWorkshop";
 import Wholesale from "./Pages/Wholesale/Wholesale";
+
+
 import AppBanner from './Images/App-banner-2500x998.jpg';
 import CateringBanner from './Images/Catering-banner-2500x998.jpg';
 import CareersBanner from './Images/Careers-banner-2500x998.jpg';
 import WholesaleBanner from './Images/Wholesale-Banner-2500x998.jpg';
+
 
 import ShopBanner from './Images/Shop-banner-2500x998.jpg';
 import LocationBanner from './Images/Location-banner-2500x998.jpg';

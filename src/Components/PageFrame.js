@@ -1,6 +1,4 @@
 
-
-
 import Header from "./Header";
 import MenuBar from "./MenuBar";
 import TextArea from "./TextArea";
@@ -11,7 +9,7 @@ function PageFrame(props) {
         <div className="page-frame">
             <Header />
             <MenuBar />
-            <TextArea image={props.image}/>
+            <TextArea image={props.image} page={props.page} />
             <Footer />
         </div>
     );
