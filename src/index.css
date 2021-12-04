@@ -20,4 +20,7 @@ code {
 .main_image{
   width:100%;
 }
+.flexblock{
+  display:flex;
+}
 

@@ -1,7 +1,7 @@
 .shopblock{
     cursor: pointer;
     width: 33%;
-    display: inline-block;
+
     padding: 25px;
     transition-duration: 0.5s;
 

@@ -1,3 +1,35 @@
 .banner img{
     width:100%;
 }
+.banner{
+    position: relative;
+}
+.banner .bannertextarea{
+    position: absolute;
+    top: 0;
+    left: 3%;
+}
+.banner .bannertextarea a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 3px solid black;
+    padding-bottom: 10px;
+
+}
+
+.banner .bannertextarea h2{
+
+    color: black;
+    text-transform: capitalize;
+    font-size: xxx-large;
+    margin: 10px 0 20px 0;
+}
+.banner .bannertextarea p{
+    color: black;
+    text-transform: uppercase;
+    margin-top: 25px;
+    margin-bottom: 0px;
+    font-weight: bold;
+}

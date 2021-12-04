@@ -36,76 +36,73 @@ import Cateringblock from './Images/Catering-block-960x720.jpg';
 
 
 let pages={
-
     "App": {
-            "main-image": {AppBanner},
-            "shop-blocks": [
+            "mainimage": AppBanner,
+            "shopblocks": [
                 {
-                    "image" :   {shop1},
-                    "header":   "Classes",
+                    "image" :   shop1,
+                    "header":   "Nicaragua Las Delicias",
                     "textheader"  :   "Tastes like",
-                    "text"  :   "kshkshfkshfkshfkshfkshfks",
-                    "price" :   "$0.00",
-                    "link"  :   "http://dfgf"
+                    "text"  :   "ALMOND BRITTLE, APPLE, DATE",
+                    "price" :   "$16.50",
+                    "link"  :   "/aasdsadadasdad"
 
                 },
                 {
-                    "image" :   {shop2},
-                    "header":   "Classes",
+                    "image" :   shop2,
+                    "header":   "The Daily",
                     "textheader"  :   "Tastes like",
-                    "text"  :   "kshkshfkshfkshfkshfkshfks",
-                    "price" :   "$0.00",
-                    "link"  :   "http://dfgf"
-
-                },,
-                {
-                    "image" :   {shop3},
-                    "header":   "Classes",
-                    "text"  :   "kshkshfkshfkshfkshfkshfks",
-                    "textheader"  :   "Tastes like",
-                    "price" :   "$0.00",
-                    "link"  :   "http://dfgf"
+                    "text"  :   "CHOCOLATE, CARAMEL, MOLASSES",
+                    "price" :   "$15.50",
+                    "link"  :   "/ruwertwurw"
 
                 },
+                {
+                    "image" :   shop3,
+                    "header":   "Great Heights",
+                    "text"  :   "CHOCOLATE FUDGE, MOLASSES, CINNAMON",
+                    "textheader"  :   "Tastes like",
+                    "price" :   "$14.00",
+                    "link"  :   "/lsdflskjdflsdfgf"
+
+                }
             ],
-            "banner-image": {AppBanner},
-            "advert-blocks": [
+
+        "banner": {
+            "image": AppBanner,
+            "header": "Coffee Subscriptions",
+            "text": "FRESHLY ROASTED COFFEE DELIVERED TO YOUR HOME",
+            "linktext": "Get started",
+            "link": "/offerings/subscribe"
+
+
+        },
+
+
+            "advertblocks": [
 
                 {
-                    "image" :   {TheWorkshopblock},
+                    "image" :   TheWorkshopblock,
                     "header":   "Classes",
                     "text"  :   "From manual brewing and latte art to full barista courses, we offer a variety of classes for every skill level!",
-                    "link"  :   "/theworkshopf"
+                    "link"  :   "/theworkshop"
 
                 },
                 {
-                    "image" :   {Wholesaleblock},
+                    "image" :   Wholesaleblock,
                     "header":   "Wholesale",
                     "text"  :   "Interested in serving Joe Coffee? Learn more about our wholesale program.",
                     "link"  :   "/wholesale"
 
                 },
                 {
-                    "image" :   {Cateringblock},
+                    "image" :   Cateringblock,
                     "header":   "Event Catering",
                     "text"  :   "Have an event that needs catering? Book a custom coffee bar for your next meeting or event.",
                     "link"  :   "/catering"
 
-                },
-                {
-                    "image" :   {shop1},
-                    "header":   "",
-                    "text"  :   "kshkshfkshfkshfkshfkshfks",
-                    "link"  :   "http://dfgf"
-
-                },
-                {
-                    "image" :   {shop2},
-                    "header":   "",
-                    "text"  :   "kshkshfkshfkshfkshfkshfks",
-                    "link"  :   "http://dfgf"
-
                 }
+
             ]
     }
 };
@@ -116,7 +113,8 @@ ReactDOM.render(
 
           <Routes>
 
-              <Route  path='/' element={<App image={AppBanner} />} />
+              {/*<Route  path='/' element={<App image={AppBanner} />} />*/}
+              <Route  path='/' element={<App dispatch={pages.App} />} />
 
               <Route  path='/careers' element={<Careers image={CareersBanner} />} />
               <Route  path='/catering' element={<Catering image={CateringBanner} />} />

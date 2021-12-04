@@ -1,4 +1,5 @@
-import React from "react";
+
+import React, { useEffect } from 'react';
 
 import './App.css';
 
@@ -17,26 +18,25 @@ import Banner2 from "./Images/Banner-2.png";
 import Banner3 from "./Images/Banner-3.png";
 import Banner4 from "./Images/Banner-4.png";
 import Banner5 from "./Images/Banner-5.png";
-import Banner6 from "./Images/Banner-6.png"
-
-
-
-
-
-
-
+import Banner6 from "./Images/Banner-6.png";
 
 
 function App(props) {
 
+   useEffect(() => { Slider(); });
+
+   let shopblocks=[];
+   let advertblocks=[];
+
+   for(let i=0; i<props.dispatch.shopblocks.length; i++){
+       shopblocks.push(<ShopBlock dispatch={props.dispatch.shopblocks[i]}/>);
+   }
+
+    for(let i=0; i<props.dispatch.advertblocks.length; i++){
+        advertblocks.push(<Block dispatch={props.dispatch.advertblocks[i]}/>);
+    }
 
 
-
-
-
-   let b=[];
-   b.length=3;
-   b.fill(<ShopBlock image={props.image}/>, 0, 3);
 
 
   return (
@@ -45,7 +45,7 @@ function App(props) {
                 <Header />
                 <MenuBar />
                 <div id="slider">
-                    <img src={props.image} className="main_image baseimage" alt="" />
+                    <img src={props.dispatch.mainimage} className="main_image baseimage" alt="" />
 
                     <img src={Banner1} className="main_image slider sliderstart" alt="" />
                     <img src={Banner2} className="main_image slider" alt="" />
@@ -55,20 +55,19 @@ function App(props) {
                     <img src={Banner6} className="main_image slider" alt="" />
                 </div>
 
-              <button onClick={()=>{ Slider(); }}>Start Slider</button>
+              {/*<button onClick={()=>{ Slider(); }}>Start Slider</button>*/}
 
                 <div className="content">
 
-                      {b}
+                    <div className="flexblock">
+                        {shopblocks}
+                    </div>
 
-                      <Banner image={props.image} />
+                    <Banner dispatch={props.dispatch.banner} />
 
-                      <Block image={props.image} />
-                      <Block image={props.image} />
-                      <Block image={props.image} />
-                      <Block image={props.image} />
-                      <Block image={props.image} />
-
+                    <div className="flexblock">
+                        {advertblocks}
+                    </div>
 
 
 
