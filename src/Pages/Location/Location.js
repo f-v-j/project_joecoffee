@@ -1,16 +1,25 @@
 
-import './Location.css';
-
-
-import PageFrame from "../../Components/PageFrame";
 import React from "react";
+
+import Header from "../../Components/Header/Header";
+import MenuBar from "../../Components/MenuBar/MenuBar";
+import Footer from "../../Components/Footer/Footer";
 
 
 
 function Location(props) {
     return (
         <div className="location">
-            <PageFrame image={props.image}/>
+            <Header />
+            <MenuBar  selected="location" />
+
+
+
+
+
+
+
+            <Footer />
         </div>
     );
 }

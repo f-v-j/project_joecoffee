@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Route, Routes} from "react-router-dom"
 
@@ -9,9 +10,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom"
 import App from './App';
 import Careers from "./Pages/Careers/Careers";
 import Catering from "./Pages/Catering/Catering";
-import Discover from "./Pages/Discover/Discover";
 import Location from "./Pages/Location/Location";
-import Shop from "./Pages/Shop/Shop";
 import TheWorkshop from "./Pages/TheWorkshop/TheWorkshop";
 import Wholesale from "./Pages/Wholesale/Wholesale";
 
@@ -19,14 +18,97 @@ import Wholesale from "./Pages/Wholesale/Wholesale";
 import AppBanner from './Images/App-banner-2500x998.jpg';
 import CateringBanner from './Images/Catering-banner-2500x998.jpg';
 import CareersBanner from './Images/Careers-banner-2500x998.jpg';
-import WholesaleBanner from './Images/Wholesale-Banner-2500x998.jpg';
-
-
-import ShopBanner from './Images/Shop-banner-2500x998.jpg';
-import LocationBanner from './Images/Location-banner-2500x998.jpg';
-import DiscoverBanner from './Images/Discover-banner-2500x998.jpg';
+import WholesaleBanner from './Images/Wholesale-banner-2500x998.jpg';
 import TheWorkshopBanner from './Images/TheWorkshop-banner-2500x998.png';
+import shop1 from './Images/shop-image-1.png';
+import shop2 from './Images/shop-image-1.png';
+import shop3 from './Images/shop-image-1.png';
 
+import Wholesaleblock from './Images/Wholesale-Block-960x720.jpg';
+import TheWorkshopblock from './Images/TheWorkshop-block-960x720.jpg';
+import Cateringblock from './Images/Catering-block-960x720.jpg';
+
+
+
+
+
+
+
+
+let pages={
+
+    "App": {
+            "main-image": {AppBanner},
+            "shop-blocks": [
+                {
+                    "image" :   {shop1},
+                    "header":   "Classes",
+                    "textheader"  :   "Tastes like",
+                    "text"  :   "kshkshfkshfkshfkshfkshfks",
+                    "price" :   "$0.00",
+                    "link"  :   "http://dfgf"
+
+                },
+                {
+                    "image" :   {shop2},
+                    "header":   "Classes",
+                    "textheader"  :   "Tastes like",
+                    "text"  :   "kshkshfkshfkshfkshfkshfks",
+                    "price" :   "$0.00",
+                    "link"  :   "http://dfgf"
+
+                },,
+                {
+                    "image" :   {shop3},
+                    "header":   "Classes",
+                    "text"  :   "kshkshfkshfkshfkshfkshfks",
+                    "textheader"  :   "Tastes like",
+                    "price" :   "$0.00",
+                    "link"  :   "http://dfgf"
+
+                },
+            ],
+            "banner-image": {AppBanner},
+            "advert-blocks": [
+
+                {
+                    "image" :   {TheWorkshopblock},
+                    "header":   "Classes",
+                    "text"  :   "From manual brewing and latte art to full barista courses, we offer a variety of classes for every skill level!",
+                    "link"  :   "/theworkshopf"
+
+                },
+                {
+                    "image" :   {Wholesaleblock},
+                    "header":   "Wholesale",
+                    "text"  :   "Interested in serving Joe Coffee? Learn more about our wholesale program.",
+                    "link"  :   "/wholesale"
+
+                },
+                {
+                    "image" :   {Cateringblock},
+                    "header":   "Event Catering",
+                    "text"  :   "Have an event that needs catering? Book a custom coffee bar for your next meeting or event.",
+                    "link"  :   "/catering"
+
+                },
+                {
+                    "image" :   {shop1},
+                    "header":   "",
+                    "text"  :   "kshkshfkshfkshfkshfkshfks",
+                    "link"  :   "http://dfgf"
+
+                },
+                {
+                    "image" :   {shop2},
+                    "header":   "",
+                    "text"  :   "kshkshfkshfkshfkshfkshfks",
+                    "link"  :   "http://dfgf"
+
+                }
+            ]
+    }
+};
 
 ReactDOM.render(
   <React.StrictMode>
@@ -38,9 +120,7 @@ ReactDOM.render(
 
               <Route  path='/careers' element={<Careers image={CareersBanner} />} />
               <Route  path='/catering' element={<Catering image={CateringBanner} />} />
-              <Route  path='/discover' element={<Discover image={DiscoverBanner} />} />
-              <Route  path='/location' element={<Location image={LocationBanner} />} />
-              <Route  path='/shop' element={<Shop image={ShopBanner} />} />
+              <Route  path='/location' element={<Location />} />
               <Route  path='/theworkshop' element={<TheWorkshop image={TheWorkshopBanner} />} />
               <Route  path='/wholesale' element={<Wholesale image={WholesaleBanner} />} />
 

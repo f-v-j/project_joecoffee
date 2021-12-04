@@ -1,0 +1,79 @@
+.menubar .left-area{
+    text-align:right;}
+
+.menubar .center-area{
+    text-align: left;
+}
+.menubar .right-area {
+    text-align:left;
+}
+
+.menubar
+{    display: table;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    color:black;
+}
+
+.menubar a{
+    text-decoration:none;
+    color: black;
+}
+
+.menubar .center-area a{
+    margin-left: 15px;
+}
+
+.menubar .right-area a{
+    margin-left:10px;
+}
+
+.menubar .left-area a{
+}
+
+.menubar .right-area button{
+    background-color: rgb(17, 138, 203);
+    padding: 10px;
+    border-radius: 0;
+    color: white;
+    border: navajowhite;
+}
+
+
+.menubar .aaa{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+
+
+.mshop, .mdiscover{
+    position:relative;
+
+}
+
+
+.shop-menubar, .discover-menubar{
+    background-color:white;
+    position:absolute;
+    padding: 20px;
+    top: 20px;
+    left: -20px;
+    display:none;
+    width: max-content;
+}
+.mshop:hover .shop-menubar, .mdiscover:hover .discover-menubar{
+    display:block;
+
+}
+.shop-menubar a, .discover-menubar a{
+    display: block;
+    margin-left:0 !important;
+}
+
+.menubar .selected{
+    border-bottom: 2px solid rgb(17, 138, 203);
+}
+
