@@ -32,13 +32,7 @@
 .menubar .left-area a{
 }
 
-.menubar .right-area button{
-    background-color: rgb(17, 138, 203);
-    padding: 10px;
-    border-radius: 0;
-    color: white;
-    border: navajowhite;
-}
+
 
 
 .menubar .aaa{
@@ -77,3 +71,19 @@
     border-bottom: 2px solid rgb(17, 138, 203);
 }
 
+
+.menubar .right-area .orderbutton{
+    background-color: rgb(17, 138, 203);
+    border: 1px solid rgb(17, 138, 203);
+    padding: 10px;
+    border-radius: 0;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.menubar .right-area .orderbutton:hover{
+    border: 1px solid black;
+    color: rgb(17, 138, 203);
+    background-color: white;
+}
