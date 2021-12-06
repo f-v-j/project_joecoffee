@@ -23,7 +23,10 @@ import Banner6 from "./Images/Banner-6.png";
 
 function App(props) {
 
-   useEffect(() => { Slider(); });
+   useEffect(() => {
+       Slider();
+       // Basket();
+   });
 
    let shopblocks=[];
    let advertblocks=[];
