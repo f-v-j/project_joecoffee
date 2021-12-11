@@ -16,11 +16,13 @@ function ShopBlock(props) {
         // let textheader  =  "Tastes Like";
         // let text  =  "almond brittle, apple, date";
         // let price  =  "$16.50";
-        // let link  =  "/theworkshop";
+
+
+    const link="/shop/daily/" + props.dispatch.id;
 
     return (
         <div className="shopblock">
-            <NavLink to={props.dispatch.link}>
+            <NavLink to={link}>
                 <div>
                     <img src={props.dispatch.image} className="" alt="" />
                     <div className="hiddentext" >

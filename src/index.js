@@ -1,69 +1,49 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-
-
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter, Route, Routes} from "react-router-dom"
-
-
 import App from './App';
-import Careers from "./Pages/Careers/Careers";
-import Catering from "./Pages/Catering/Catering";
-import Location from "./Pages/Location/Location";
-import TheWorkshop from "./Pages/TheWorkshop/TheWorkshop";
-import Wholesale from "./Pages/Wholesale/Wholesale";
-
 
 import AppBanner from './Images/App-banner-2500x998.jpg';
-import CateringBanner from './Images/Catering-banner-2500x998.jpg';
-import CareersBanner from './Images/Careers-banner-2500x998.jpg';
-import WholesaleBanner from './Images/Wholesale-banner-2500x998.jpg';
-import TheWorkshopBanner from './Images/TheWorkshop-banner-2500x998.png';
 import shop1 from './Images/shop-image-1.png';
 import shop2 from './Images/shop-image-1.png';
 import shop3 from './Images/shop-image-1.png';
-
 import Wholesaleblock from './Images/Wholesale-Block-960x720.jpg';
 import TheWorkshopblock from './Images/TheWorkshop-block-960x720.jpg';
 import Cateringblock from './Images/Catering-block-960x720.jpg';
 
-
-
-
-
-
-
-
 let pages={
-    "App": {
+    "MainPage": {
             "mainimage": AppBanner,
             "shopblocks": [
                 {
+                    "id"    :   "1",
                     "image" :   shop1,
                     "header":   "Nicaragua Las Delicias",
                     "textheader"  :   "Tastes like",
                     "text"  :   "ALMOND BRITTLE, APPLE, DATE",
                     "price" :   "$16.50",
-                    "link"  :   "/aasdsadadasdad"
+                    "type"  :   "Cofee"
 
                 },
                 {
+                    "id"    :   "2",
                     "image" :   shop2,
                     "header":   "The Daily",
                     "textheader"  :   "Tastes like",
                     "text"  :   "CHOCOLATE, CARAMEL, MOLASSES",
                     "price" :   "$15.50",
-                    "link"  :   "/ruwertwurw"
+                    "type"  :   "Cofee"
 
                 },
                 {
+                    "id"    :   "3",
                     "image" :   shop3,
                     "header":   "Great Heights",
                     "text"  :   "CHOCOLATE FUDGE, MOLASSES, CINNAMON",
                     "textheader"  :   "Tastes like",
                     "price" :   "$14.00",
-                    "link"  :   "/lsdflskjdflsdfgf"
+                    "type"  :   "Cofee"
 
                 }
             ],
@@ -106,28 +86,124 @@ let pages={
             ]
     }
 };
+let goods={
+    "Cofee": [
+        {
+            "id"    :   "1",
+            "image" :   shop1,
+            "header":   "Nicaragua Las Delicias",
+            "textheader"  :   "Tastes like",
+            "text"  :   "ALMOND BRITTLE, APPLE, DATE",
+            "price" :   "$16.50",
+            "type"  :   "Cofee"
+
+        },
+        {
+            "id"    :   "2",
+            "image" :   shop2,
+            "header":   "The Daily",
+            "textheader"  :   "Tastes like",
+            "text"  :   "CHOCOLATE, CARAMEL, MOLASSES",
+            "price" :   "$15.50",
+            "type"  :   "Cofee"
+
+        },
+        {
+            "id"    :   "3",
+            "image" :   shop3,
+            "header":   "Great Heights",
+            "text"  :   "CHOCOLATE FUDGE, MOLASSES, CINNAMON",
+            "textheader"  :   "Tastes like",
+            "price" :   "$14.00",
+            "type"  :   "Cofee"
+
+        },
+        {
+            "id"    :   "4",
+            "image" :   shop1,
+            "header":   "Nicaragua Las Delicias",
+            "textheader"  :   "Tastes like",
+            "text"  :   "ALMOND BRITTLE, APPLE, DATE",
+            "price" :   "$16.50",
+            "type"  :   "Cofee"
+
+        },
+        {
+            "id"    :   "5",
+            "image" :   shop2,
+            "header":   "The Daily",
+            "textheader"  :   "Tastes like",
+            "text"  :   "CHOCOLATE, CARAMEL, MOLASSES",
+            "price" :   "$15.50",
+            "type"  :   "Cofee"
+
+        },
+        {
+            "id"    :   "6",
+            "image" :   shop3,
+            "header":   "Great Heights",
+            "text"  :   "CHOCOLATE FUDGE, MOLASSES, CINNAMON",
+            "textheader"  :   "Tastes like",
+            "price" :   "$14.00",
+            "type"  :   "Cofee"
+
+        },
+        {
+            "id"    :   "7",
+            "image" :   shop1,
+            "header":   "Nicaragua Las Delicias",
+            "textheader"  :   "Tastes like",
+            "text"  :   "ALMOND BRITTLE, APPLE, DATE",
+            "price" :   "$16.50",
+            "type"  :   "Cofee"
+
+        },
+        {
+            "id"    :   "8",
+            "image" :   shop2,
+            "header":   "The Daily",
+            "textheader"  :   "Tastes like",
+            "text"  :   "CHOCOLATE, CARAMEL, MOLASSES",
+            "price" :   "$15.50",
+            "type"  :   "Cofee"
+
+        },
+        {
+            "id"    :   "9",
+            "image" :   shop3,
+            "header":   "Great Heights",
+            "text"  :   "CHOCOLATE FUDGE, MOLASSES, CINNAMON",
+            "textheader"  :   "Tastes like",
+            "price" :   "$14.00",
+            "type"  :   "Cofee"
+
+        },
+        {
+            "id"    :   "10",
+            "image" :   shop2,
+            "header":   "The Daily",
+            "textheader"  :   "Tastes like",
+            "text"  :   "CHOCOLATE, CARAMEL, MOLASSES",
+            "price" :   "$15.50",
+            "type"  :   "Cofee"
+
+        },
+        {
+            "id"    :   "11",
+            "image" :   shop3,
+            "header":   "Great Heights",
+            "text"  :   "CHOCOLATE FUDGE, MOLASSES, CINNAMON",
+            "textheader"  :   "Tastes like",
+            "price" :   "$14.00",
+            "type"  :   "Cofee"
+
+        }
+    ]
+};
 
 ReactDOM.render(
   <React.StrictMode>
-      <BrowserRouter>
-
-          <Routes>
-
-              {/*<Route  path='/' element={<App image={AppBanner} />} />*/}
-              <Route  path='/' element={<App dispatch={pages.App} />} />
-
-              <Route  path='/careers' element={<Careers image={CareersBanner} />} />
-              <Route  path='/catering' element={<Catering image={CateringBanner} />} />
-              <Route  path='/location' element={<Location />} />
-              <Route  path='/theworkshop' element={<TheWorkshop image={TheWorkshopBanner} />} />
-              <Route  path='/wholesale' element={<Wholesale image={WholesaleBanner} />} />
-
-
-          </Routes>
-
-          {/*<App image={img1} />*/}
-
-      </BrowserRouter>
+      <App dispatch={{pages:pages, goods:goods}} />
   </React.StrictMode>,
   document.getElementById('root')
 );
