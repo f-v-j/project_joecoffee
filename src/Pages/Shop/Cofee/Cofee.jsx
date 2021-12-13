@@ -6,10 +6,11 @@ import Footer from "../../../Components/Footer/Footer";
 import ShopBlock from "../../../Components/Block/ShopBlock";
 
 function Cofee(props) {
-    let shopblocks=[];
-    for(let i=0; i<props.dispatch.length; i++){
-        shopblocks.push(<ShopBlock dispatch={props.dispatch[i]}/>);
-    }
+    // let shopblocks=[];
+    // for(let i=0; i<props.dispatch.length; i++){
+    //     shopblocks.push(<ShopBlock dispatch={props.dispatch[i]}/>);
+    // }
+
     return (
         <div className="cofee">
             <Header />
@@ -17,7 +18,12 @@ function Cofee(props) {
 
             <h1>Cofee</h1>
             <div>
-                {shopblocks}
+                {/*{shopblocks}*/}
+
+                { props.dispatch.map((element)=>{
+                    return <ShopBlock dispatch={element}/>
+                }) }
+
             </div>
             <Footer />
         </div>

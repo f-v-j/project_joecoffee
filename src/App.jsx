@@ -14,6 +14,7 @@ import TheWorkshopBanner from "./Images/TheWorkshop-banner-2500x998.png";
 import Wholesale from "./Pages/Wholesale/Wholesale";
 import WholesaleBanner from "./Images/Wholesale-banner-2500x998.jpg";
 import Daily from "./Pages/Shop/Daily/Daily";
+import MyAccount from "./Pages/MyAccount/MyAccount";
 
 
 
@@ -29,9 +30,9 @@ function App(props) {
     }
     let goodsroutes=[];
     for(let i=1; i<=props.dispatch.goods.Cofee.length; i++){
-        let aaa ='/shop/daily/'+i;
+        let path ='/shop/daily/'+i;
         let good = GetGoodFromID(i);
-        goodsroutes.push(<Route  path={aaa} element={<Daily id={i} dispatch={good}/>} />);
+        goodsroutes.push(<Route  path={path} element={<Daily id={i} dispatch={good}/>} />);
     }
 
   return (
@@ -46,6 +47,9 @@ function App(props) {
                   <Route  path='/location' element={<Location />} />
                   <Route  path='/theworkshop' element={<TheWorkshop image={TheWorkshopBanner} />} />
                   <Route  path='/wholesale' element={<Wholesale image={WholesaleBanner} />} />
+                  <Route  path='/my-account' element={<MyAccount />} />
+
+
               </Routes>
           </BrowserRouter>
       </div>
