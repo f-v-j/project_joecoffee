@@ -1,0 +1,62 @@
+.shopblock{
+    cursor: pointer;
+    width: 33%;
+
+    padding: 25px;
+    transition-duration: 0.5s;
+
+}
+
+
+
+.shopblock img{
+    width:100%;
+
+}
+.shopblock a{
+    text-decoration:none;
+}
+
+.shopblock h2, .shopblock p{
+    color:black;
+    font-weight:bold;
+}
+
+.shopblock div{
+    position:relative;
+}
+.shopblock .hiddentext{
+    background-color:rgb(17, 138, 203);
+    padding:10px;
+    position: absolute;
+    bottom: 4px;
+    margin: 0;
+    opacity: 0;
+    width:100%;
+    transition-duration: 0.5s;
+}
+.shopblock .hiddentext p, .shopblock .hiddentext h4{
+    color:white;
+    margin: 0;
+}
+
+
+.shopblock:hover .hiddentext{
+    opacity: 1;
+    padding:30px;
+}
+.shopblock:hover h2, .shopblock:hover p.price{
+    opacity: 0.5;
+}
+
+.shopblock .hiddentext p{
+   text-transform: capitalize;
+}
+.shopblock .hiddentext h4{
+    text-transform: uppercase;
+}
+
+
+
+
+

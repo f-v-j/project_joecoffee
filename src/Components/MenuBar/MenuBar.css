@@ -1,0 +1,103 @@
+.menubar .left-area{
+    text-align:right;}
+
+.menubar .center-area{
+    text-align: left;
+}
+.menubar .right-area {
+    text-align:left;
+}
+
+.menubar{
+    display: table;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    color:black;
+}
+
+.menubar a{
+    text-decoration:none;
+    color: black;
+}
+
+.menubar .center-area a{
+    margin-left: 15px;
+}
+
+.menubar .right-area a{
+    margin-left:10px;
+}
+
+.menubar .left-area a{
+}
+
+
+
+
+.menubar .aaa{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+
+
+.mshop, .mdiscover{
+    position:relative;
+
+}
+
+
+.shop-menubar, .discover-menubar{
+    background-color:white;
+    position:absolute;
+    padding: 20px;
+    top: 20px;
+    left: -20px;
+    /*display:none;*/
+    width: max-content;
+    z-index: 50;
+}
+/*.mshop:hover .shop-menubar, .mdiscover:hover .discover-menubar{*/
+/*    display:block;*/
+
+/*}*/
+.shop-menubar a, .discover-menubar a{
+    display: block;
+    margin-left:0 !important;
+}
+
+.menubar .selected{
+    border-bottom: 2px solid rgb(17, 138, 203);
+}
+
+
+.menubar .right-area .orderbutton{
+    background-color: rgb(17, 138, 203);
+    border: 1px solid rgb(17, 138, 203);
+    padding: 10px;
+    border-radius: 0;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.menubar .right-area .orderbutton:hover{
+    border: 1px solid black;
+    color: rgb(17, 138, 203);
+    background-color: white;
+}
+#darkwindow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: black;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+

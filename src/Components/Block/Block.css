@@ -1,0 +1,22 @@
+.block{
+    cursor: pointer;
+    width: 33%;
+
+    padding: 25px;
+    transition-duration: 0.5s;
+}
+
+.block:hover{
+    opacity:0.5;
+}
+.block img{
+    width:100%;
+}
+.block a{
+    text-decoration:none;
+}
+.block h2, .block p{
+    color:black;
+    font-weight:bold;
+}
+
