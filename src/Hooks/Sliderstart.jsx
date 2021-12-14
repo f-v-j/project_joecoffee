@@ -1,5 +1,5 @@
 
-export function Slider() {
+export function Sliderstart() {
 
     let slider=document.getElementById("slider");
     let i=2;

@@ -1,4 +1,4 @@
-import React, {useState,useEffect} from "react";
+import React, {useState} from "react";
 import logo from '../../Images/joecoffee_logo-262x68.png';
 import magn from '../../Images/magn-24x24.png';
 import head from '../../Images/head-24x24.png';
@@ -12,32 +12,15 @@ function MenuBar(props) {
     const [discoversubmenu, setDiscoversubmenu] = useState(false);
     const [basketopen, setBasketopen] = useState(false);
 
-    useEffect(()=>{
-        if(basketopen) {
-            document.getElementById("darkwindow").style.display = "block";
-            document.getElementById("basket").style.display = "block";
-            document.getElementById("basket").style.right = "0";
-        }
-        else{
-            document.getElementById("basket").style.right = "-300px";
-            document.getElementById("darkwindow").style.display = "none";
-        }
-    },[basketopen]);
-
-    useEffect(()=>{
-        document.getElementsByTagName("body")[0].addEventListener('click',(event)=>{
-            if(event.target.className!=='mshop active') setShopsubmenu(false);
-            if(event.target.className!=='mdiscover active') setDiscoversubmenu(false);
-        });
-    },[]);
-
     return (
             <div className='menubar'>
                 <div className="left-area aaa" >
                     <NavLink to="/" className={props.selected==='app' ? 'selected' : ''}><img src={logo} /></NavLink>
                 </div>
                 <div className="center-area aaa">
-                    <NavLink  to="" className="mshop"  onClick={()=>{
+                    <NavLink  to="" className="mshop"  onBlur={()=>{
+                        setShopsubmenu(false)
+                    }} onClick={()=>{
                         setShopsubmenu(!shopsubmenu);
                         if(discoversubmenu)setDiscoversubmenu(!discoversubmenu);
                     }}>Shop
@@ -53,7 +36,9 @@ function MenuBar(props) {
                         </div>}
                     </NavLink>
                     <NavLink to="/theworkshop" className={props.selected==='theworkshop' ? 'selected' : ''}>TheWorkshop</NavLink>
-                    <NavLink to="" className="mdiscover" onClick={()=>{
+                    <NavLink to="" className="mdiscover" onBlur={()=>{
+                        setDiscoversubmenu(false);
+                    }} onClick={()=>{
                         setDiscoversubmenu(!discoversubmenu);
                         if(shopsubmenu)setShopsubmenu(!shopsubmenu);
                     }}>Discover
@@ -74,8 +59,11 @@ function MenuBar(props) {
                     <button className="order" class="orderbutton">ORDER ONLINE</button>
                     <NavLink to="/my-account"><img src={head} /></NavLink>
                     <NavLink to="/search"><img src={magn} /></NavLink>
-                    <NavLink to=""  onClick={()=>{setBasketopen(true)}}><img src={basketimage} /></NavLink>
-                    <div id="darkwindow" onClick={()=>{setBasketopen(false)}}></div>
+                    <NavLink to=""  onClick={()=>{
+                        // setBasketopen(true);
+                        document.getElementById("basket").style.right="0px";
+                        document.getElementById("darkwindow").style.display="block";
+                    }}><img src={basketimage} /></NavLink>
                     <Basket basketopen={basketopen} setBasketopen={setBasketopen} />
                 </div>
             </div>

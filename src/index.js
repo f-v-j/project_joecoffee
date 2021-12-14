@@ -47,8 +47,7 @@ let pages={
 
                 }
             ],
-
-        "banner": {
+            "banner": {
             "image": AppBanner,
             "header": "Coffee Subscriptions",
             "text": "FRESHLY ROASTED COFFEE DELIVERED TO YOUR HOME",
@@ -57,10 +56,7 @@ let pages={
 
 
         },
-
-
             "advertblocks": [
-
                 {
                     "image" :   TheWorkshopblock,
                     "header":   "Classes",
@@ -82,7 +78,6 @@ let pages={
                     "link"  :   "/catering"
 
                 }
-
             ]
     }
 };

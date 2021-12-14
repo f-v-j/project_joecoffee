@@ -1,0 +1,17 @@
+#slider{
+    position: relative;
+}
+
+#slider img.slider{
+    transition-duration: 2s;
+    position:absolute;
+    top:0;
+    left:0;
+    opacity: 0;
+}
+#slider img.slider.baseimage{
+    opacity:0;
+}
+#slider img.slider.sliderstart{
+    opacity: 1;
+}
