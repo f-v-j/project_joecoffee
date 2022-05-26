@@ -1,0 +1,16 @@
+.basketrightblock{
+    background-color: lightgray;
+    text-align: left;
+}
+.basketrightblock img{
+    width:50px;
+}
+.basketrightblock a{
+    text-decoration:none;
+}
+.basketrightblock h4{
+    padding:10px;
+}
+
+
+

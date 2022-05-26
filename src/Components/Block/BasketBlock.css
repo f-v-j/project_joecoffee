@@ -1,0 +1,27 @@
+.basketblock{
+    width: 70%;
+    margin: auto;
+    padding: 25px;
+    background-color: lightgray;
+    text-align: left;
+}
+.basketblock img{
+    width:100px;
+    cursor: pointer;
+}
+.basketblock a{
+    text-decoration:none;
+}
+.basketblock h4{
+    padding:10px;
+}
+.basketblock .goodsname{
+    width:300px;
+}
+.basketblock .price{
+    width:100px;
+}
+.basketblock .deleteitem{
+    cursor: pointer;
+}
+

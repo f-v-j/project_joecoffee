@@ -11,6 +11,7 @@ import {Sliderstart} from "../../Hooks/Sliderstart";
 function Slider(props) {
     useEffect(() => {
         Sliderstart();
+        document.cookie = "user3=John3";
     });
     return (
         <div id="slider">

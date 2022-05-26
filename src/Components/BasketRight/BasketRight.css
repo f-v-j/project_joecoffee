@@ -9,9 +9,7 @@
     left: 0;
     display: none;
 }
-
-
-#basket{
+#basketright{
     position: fixed;
     width: 300px;
     height: 100%;
@@ -25,28 +23,28 @@
     padding-bottom:86px;
 
 }
-#basket h2{
+#basketright h2{
     margin-top: 0;
 }
-#closebasket{
+#closebasketright{
     position: absolute;
     top: 0;
     right: 0;
     margin: 15px;
     cursor: pointer;
 }
-.basketimage{
+.basketrightimage{
     position: absolute;
     top: 15px;
     left: -37px;
     cursor: pointer;
     border-radius: 13px;
 }
-.basketimage img{
+.basketrightimage img{
     /*border-radius: 13px;*/
 }
 
-div.basket button{
+div.basketright button{
     display: block;
     padding: 15px;
     border-radius: 0px;
@@ -59,3 +57,4 @@ div.basket button{
     cursor: pointer;
     margin: 10px 0 0 0;
 }
+

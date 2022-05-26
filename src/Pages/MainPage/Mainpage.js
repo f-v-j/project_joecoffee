@@ -8,8 +8,6 @@ import Footer from "../../Components/Footer/Footer";
 
 import Slider from "../../Components/Slider/Slider";
 
-
-
 function MainPage(props) {
     return (
         <div className="App">

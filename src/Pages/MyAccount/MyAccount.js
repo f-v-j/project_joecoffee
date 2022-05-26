@@ -6,25 +6,15 @@ import MenuBar from "../../Components/MenuBar/MenuBar";
 import Footer from "../../Components/Footer/Footer";
 import Showpassimg from "../../Images/showpass.png";
 
-
-
 const SignupForm = () => {
     const [showpass,setShowpass] = useState(false);
-    useEffect(()=>{
-
-        showpass ? document.getElementById("password").type='text' : document.getElementById("password").type='password';
-
-    },[showpass])
-
     const formik = useFormik({
         initialValues: {
             email: '',
             password: '',
         },
         onSubmit: values => {
-
             alert(formik.values.password);
-
             alert(JSON.stringify(values, null, 2));
         },
     });
@@ -42,13 +32,22 @@ const SignupForm = () => {
             </div>
             <div className="formitem pass">
                 <label htmlFor="password">PASSWORD</label>
-                <input
-                    id="password"
-                    name="password"
-                    type="password"
-                    onChange={formik.handleChange}
-                    value={formik.values.password}
-                />
+                { showpass ?
+                    <input
+                        id="password"
+                        name="password"
+                        type="text"                     /*showpass ?  type="password" :  type="txt"*/
+                        onChange={formik.handleChange}
+                        value={formik.values.password}
+                    />:
+                    <input
+                        id="password"
+                        name="password"
+                        type="password"
+                        onChange={formik.handleChange}
+                        value={formik.values.password}
+                    />
+                }
                 <div className="showpass" onClick={()=>{setShowpass(!showpass)}}><img src={Showpassimg} /></div>
             </div>
             <div className="formitem btn">
@@ -59,9 +58,6 @@ const SignupForm = () => {
 };
 
 function MyAccount(props) {
-
-
-
     return (
         <>
             <Header />

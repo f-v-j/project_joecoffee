@@ -6,24 +6,16 @@ import Footer from "../../../Components/Footer/Footer";
 import ShopBlock from "../../../Components/Block/ShopBlock";
 
 function Cofee(props) {
-    // let shopblocks=[];
-    // for(let i=0; i<props.dispatch.length; i++){
-    //     shopblocks.push(<ShopBlock dispatch={props.dispatch[i]}/>);
-    // }
-
     return (
         <div className="cofee">
             <Header />
-            <MenuBar  selected="cofee" />
+            <MenuBar  selected={props.dispatch[0].type.toLowerCase()} />
 
-            <h1>Cofee</h1>
+            <h1>{props.dispatch[0].type}</h1>
             <div>
-                {/*{shopblocks}*/}
-
                 { props.dispatch.map((element)=>{
                     return <ShopBlock dispatch={element}/>
                 }) }
-
             </div>
             <Footer />
         </div>
