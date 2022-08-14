@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
-import {connect} from "react-redux";
+import {connect, useSelector, useDispatch} from "react-redux";
+
 
 import './Article.css';
 import Header from "../../../Components/Header/Header";
@@ -11,42 +12,44 @@ import {NavLink} from "react-router-dom";
 import {language} from "../../../index"
 import App from "../../../App";
 
+
+import {
+    useParams,
+} from 'react-router-dom';
+
+
+
 function Article(props) {
 
 
-    const good = props.GetGoodFromID(props.id,props.goods);
+    const { slug } = useParams();
 
+    const good = props.GetGoodFromID(props.id,props.goods);
     const value = useContext(language);
+
+    const hook_order = useSelector((state) => state.order);
+    const hook_dispatch = useDispatch();
 
 
     return (
-
             <div className="article">
                 <Header/>
                 <MenuBar selected={good.type.toLowerCase()}/>
+
                 <h1>
+                    <h1>Slug = {slug}</h1>
 
                     {value}
-
-
                     <language.Consumer>
                         {language => <button>language</button>}
                     </language.Consumer>
-
-
                 </h1>
-
-
-
-
-
-
-
                 <div className="flexblock bbb">
                     <div>
                         <img src={good.image} className="goodimg" alt=""/>
                     </div>
                     <div className="">
+                        <h2>{hook_order}</h2>
                         <h1>{props.order}</h1>
                         <h2>{good.header}</h2>
                         <h4>{good.textheader}</h4>
@@ -54,7 +57,10 @@ function Article(props) {
                         <p className="price">{good.price}</p>
                         <button onClick={() => {
                             document.getElementById("addbasket").style.display = "block";
-                            props.addGood(props.id);
+                            // props.addGood(props.id);
+
+                            hook_dispatch({type: 'ADD_GOOD', payload: props.id});
+
                         }
                         }>ADD TO BASKET
                         </button>
@@ -87,7 +93,7 @@ function mapStateToProps (state) {
 }
 function mapDispatchToProps (dispatch) {
         return {
-            addGood: (id) => { dispatch({type: 'ADD_GOOD', payload: id})}
+            // addGood: (id) => { dispatch({type: 'ADD_GOOD', payload: id})}
         }
 }
 

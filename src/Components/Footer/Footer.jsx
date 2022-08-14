@@ -99,7 +99,7 @@ class Footer extends React.Component {
                     <h2>LEARN</h2>
                     <a href="/wholesale">Wholesale</a>
                     <a href="/location">Locations</a>
-                    <a href="/">Contact</a>
+                    <a href="/shop/article/2">Contact</a>
                     <a href="/">Blog</a>
                     <a href="/">Frequently Asked Questions</a>
                     <a href="/">Privacy Policy</a>

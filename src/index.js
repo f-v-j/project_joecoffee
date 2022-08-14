@@ -276,6 +276,8 @@ let goods={
 
 
 const initialState = {
+    theme : 'light',
+    language : 'en',
     order : [],
     goods:goods,
     GetGoodFromID: (id,goods)=>{
@@ -304,9 +306,18 @@ function reducer_orders(state=initialState,action){
             const arr_from_set1 = [...set_from_arr1];
             return {...state, order:arr_from_set1}
 
-        default: return {...state}
+        case 'CHANGE_LANGUAGE':
+            return {...state, language : action.payload}
+
+        case 'CHANGE_THEME':
+            return {...state, theme : action.payload}
+
+        default:
+            return {...state}
     }
 }
+
+
 
 const store = createStore(reducer_orders);
 console.log("store:",store.getState());

@@ -20,11 +20,16 @@ function Header() {
     }
 
     return (
-            <header className="header" >
-                <h3 ref={aaa} >Please be advised that during the holiday season, shipping may take longer than normal due to carrier high volume delays.</h3>
-                <h3 ref={callbackfunction} >Please be advised that during the holiday season, shipping may take longer than normal due to carrier high volume delays.</h3>
-                <button onClick={()=>{ButtonClickHundler();ButtonClickHundler2();}} >Click</button>
-                {/*<button onClick={ButtonClickHundler2} >Click</button>*/}
+            <header className="header"  >
+
+                {/*<div id="portal"></div>*/}
+                {/*<h3  ref={aaa} >Please be advised that during the holiday season, shipping may take longer than normal due to carrier high volume delays.</h3>*/}
+                {/*<h3 ref={callbackfunction} >Please be advised that during the holiday season, shipping may take longer than normal due to carrier high volume delays.</h3>*/}
+                {/*<button onClick={()=>{ButtonClickHundler();ButtonClickHundler2();}} >Click</button>*/}
+                {/*/!*<button onClick={ButtonClickHundler2} >Click</button>*!/*/}
+
+                <h3>Free UPS Shipping on All U.S. Orders Over $40! Subscriptions Always Ship Free.</h3>
+
             </header>
     );
 }

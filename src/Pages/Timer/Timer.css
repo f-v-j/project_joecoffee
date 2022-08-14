@@ -1,0 +1,29 @@
+
+
+
+.timerpage {
+    text-align:center;
+
+}
+
+.timerpage #container span {
+    cursor: pointer;
+    margin: 10px;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 46px;
+    background: lightgray;
+}
+
+.timerpage #container {
+    position:relative;
+    top:35%;
+
+}
+.timerpage #container h1{
+    font-size:50px;
+
+}
+
+
+

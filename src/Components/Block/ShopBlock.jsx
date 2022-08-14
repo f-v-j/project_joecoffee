@@ -6,13 +6,15 @@ import Lasdelicias from '../../Images/shop-image-1.png';
 
 
 function ShopBlock(props) {
-    const link="/shop/article/" + props.dispatch.id;
+    const link="/shop/article/" + props.dispatch.id +"/255";
     return (
         <div className="shopblock">
+
             <NavLink to={link}>
                 <div>
                     <img src={props.dispatch.image} className="" alt="" />
                     <div className="hiddentext" >
+
                         <h4>{props.dispatch.textheader}</h4>
                         <p>{props.dispatch.text}</p>
                     </div>

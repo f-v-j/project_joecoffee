@@ -1,0 +1,46 @@
+.testpage{
+    min-height: 1000px;
+    padding:25px;
+}
+.testpage.dark{
+    background-color: black;
+}
+.testpage.light{
+    background-color: lightgray;
+}
+.testpage .activebutton{
+    background-color: indianred;
+}
+.testpage .content.light{
+    background-color: #61dafb;
+    border: 1px solid #61dafb;
+    margin: 20px;
+}
+.testpage .content.dark{
+    background-color: grey;
+    border: 1px solid grey;
+    margin: 20px;
+}
+
+
+.wrapper{
+    display: flex;
+    height: 500px;
+    background-color: blueviolet;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+}
+.inner{
+
+
+}
+.a1{
+    background-color: green;
+}
+.a2{
+    background-color: gray;
+}
+.a3{
+    background-color: purple;
+}
