@@ -1,3 +1,40 @@
-.myaccount .content{
-    text-align: center;
+.myaccount .formitem{
+    text-align: left;
+    padding:10px;
+}
+.myaccount .formitem.btn{
+    text-align: right;
+}
+.myaccount .formitem.pass{
+    position: relative;
+}
+.myaccount label{
+    font-weight: bold;
+}
+.myaccount input{
+    height: 35px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 0px;
+    margin-top: 5px;
+}
+.myaccount button{
+    font-weight: bold;
+    padding: 10px 25px;
+    border: 1px solid black;
+    border-radius: 0px;
+    margin-top: 5px;
+}
+.myaccount form{
+    padding: 30px;
+    background-color: #f7f7f7;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.showpass{
+    position: absolute;
+    cursor: pointer;
+    right: 18px;
+    bottom: 12px;
 }

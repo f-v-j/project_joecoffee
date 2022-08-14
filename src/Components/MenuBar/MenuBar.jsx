@@ -1,35 +1,17 @@
-import React, {useState,useEffect} from "react";
+import React, {useState} from "react";
 import logo from '../../Images/joecoffee_logo-262x68.png';
 import magn from '../../Images/magn-24x24.png';
 import head from '../../Images/head-24x24.png';
 import { NavLink } from 'react-router-dom';
 import './MenuBar.css';
-import Basket from "../Basket/Basket";
+import BasketRight from "../BasketRight/BasketRight";
 import basketimage from "../../Images/basket-24x24.png";
+import {connect} from "react-redux";
 
 function MenuBar(props) {
     const [shopsubmenu, setShopsubmenu] = useState(false);
     const [discoversubmenu, setDiscoversubmenu] = useState(false);
     const [basketopen, setBasketopen] = useState(false);
-
-    useEffect(()=>{
-        if(basketopen) {
-            document.getElementById("darkwindow").style.display = "block";
-            document.getElementById("basket").style.display = "block";
-            document.getElementById("basket").style.right = "0";
-        }
-        else{
-            document.getElementById("basket").style.right = "-300px";
-            document.getElementById("darkwindow").style.display = "none";
-        }
-    },[basketopen]);
-
-    useEffect(()=>{
-        document.getElementsByTagName("body")[0].addEventListener('click',(event)=>{
-            if(event.target.className!=='mshop active') setShopsubmenu(false);
-            if(event.target.className!=='mdiscover active') setDiscoversubmenu(false);
-        });
-    },[]);
 
     return (
             <div className='menubar'>
@@ -37,23 +19,27 @@ function MenuBar(props) {
                     <NavLink to="/" className={props.selected==='app' ? 'selected' : ''}><img src={logo} /></NavLink>
                 </div>
                 <div className="center-area aaa">
-                    <NavLink  to="" className="mshop"  onClick={()=>{
+                    <NavLink  to="" className="mshop"
+                        // onBlur={()=>{ setShopsubmenu(false)}}
+                        onClick={()=>{
                         setShopsubmenu(!shopsubmenu);
                         if(discoversubmenu)setDiscoversubmenu(!discoversubmenu);
-                    }}>Shop
+                        }}><span className={props.selected==='cofee'||props.selected==='tea'||props.selected==='brewgear' ? 'selected' : ''} >Shop</span>
                         { shopsubmenu && <div className="shop-menubar">
-                            <NavLink to="/shop/cofee" className={props.selected==='cofee' ? 'selected' : ''}>COFFEE</NavLink>
-                            <NavLink to="/shop/tea">TEA & TURMERIC</NavLink>
-                            <NavLink to="/">BREW GEAR</NavLink>
-                            <NavLink to="/">MERCHANDISE</NavLink>
-                            <NavLink to="/">SUBSCRIBE</NavLink>
-                            <NavLink to="/">GIFTS</NavLink>
-                            <NavLink to="/">JOE TO GO BOXED COFFEE</NavLink>
-                            <NavLink to="/theworkshop">CLASSES</NavLink>
+                            <NavLink to="/shop/cofee" ><span className={props.selected==='cofee' ? 'selected' : ''}>COFFEE</span></NavLink>
+                            <NavLink to="/shop/tea" ><span className={props.selected==='tea' ? 'selected' : ''}>TEA & TURMERIC</span></NavLink>
+                            <NavLink to="/shop/brewgear"><span className={props.selected==='brewgear' ? 'selected' : ''}>BREW GEAR</span></NavLink>
+                            <NavLink to="/"><span>MERCHANDISE</span></NavLink>
+                            <NavLink to="/"><span>SUBSCRIBE</span></NavLink>
+                            <NavLink to="/"><span>GIFTS</span></NavLink>
+                            <NavLink to="/"><span>JOE TO GO BOXED COFFEE</span></NavLink>
+                            <NavLink to="/theworkshop"><span>CLASSES</span></NavLink>
                         </div>}
                     </NavLink>
                     <NavLink to="/theworkshop" className={props.selected==='theworkshop' ? 'selected' : ''}>TheWorkshop</NavLink>
-                    <NavLink to="" className="mdiscover" onClick={()=>{
+                    <NavLink to="" className="mdiscover" onBlur={()=>{
+                        setDiscoversubmenu(false);
+                    }} onClick={()=>{
                         setDiscoversubmenu(!discoversubmenu);
                         if(shopsubmenu)setShopsubmenu(!shopsubmenu);
                     }}>Discover
@@ -74,11 +60,27 @@ function MenuBar(props) {
                     <button className="order" class="orderbutton">ORDER ONLINE</button>
                     <NavLink to="/my-account"><img src={head} /></NavLink>
                     <NavLink to="/search"><img src={magn} /></NavLink>
-                    <NavLink to=""  onClick={()=>{setBasketopen(true)}}><img src={basketimage} /></NavLink>
-                    <div id="darkwindow" onClick={()=>{setBasketopen(false)}}></div>
-                    <Basket basketopen={basketopen} setBasketopen={setBasketopen} />
+                    <NavLink id="basketrightlink" to=""  onClick={()=>{
+                        // setBasketopen(true);
+                        document.getElementById("basketright").style.right="0px";
+                        document.getElementById("darkwindow").style.display="block";
+                    }}><i id="amoun_items_in_basket">{props.order.length}</i><img src={basketimage} /></NavLink>
+
+                    <BasketRight basketopen={basketopen} setBasketopen={setBasketopen} />
                 </div>
             </div>
     );
 }
-export default MenuBar;
+
+function mapStateToProps (state) {
+    return {
+        order: state.order
+    }
+}
+function mapDispatchToProps (dispatch) {
+    return {
+
+    }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(MenuBar);

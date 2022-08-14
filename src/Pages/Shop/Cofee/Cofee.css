@@ -1,6 +1,7 @@
 .cofee h1{
   text-align: center;
   font-size: xxx-large;
+  text-transform: capitalize;
 }
 
 .cofee .shopblock{

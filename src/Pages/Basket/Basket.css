@@ -1,4 +1,11 @@
 
+.basketpage #basketrightlink {
+    display: none;
+}
+
+.basketpage .goodsarea{
+    padding-bottom:40px
+}
 
 
 

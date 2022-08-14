@@ -1,7 +1,15 @@
-
-
-
-#basket{
+#darkwindow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: black;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    display: none;
+}
+#basketright{
     position: fixed;
     width: 300px;
     height: 100%;
@@ -15,28 +23,28 @@
     padding-bottom:86px;
 
 }
-#basket h2{
+#basketright h2{
     margin-top: 0;
 }
-#closebasket{
+#closebasketright{
     position: absolute;
     top: 0;
     right: 0;
     margin: 15px;
     cursor: pointer;
 }
-.basketimage{
+.basketrightimage{
     position: absolute;
     top: 15px;
     left: -37px;
     cursor: pointer;
     border-radius: 13px;
 }
-.basketimage img{
+.basketrightimage img{
     /*border-radius: 13px;*/
 }
 
-.basket button{
+div.basketright button{
     display: block;
     padding: 15px;
     border-radius: 0px;
@@ -47,4 +55,6 @@
     border-color: rgb(17, 138, 203);
     margin-top:10px;
     cursor: pointer;
+    margin: 10px 0 0 0;
 }
+
